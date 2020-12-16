@@ -1,0 +1,36 @@
+﻿<Window x:Class="EliminarP2B.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EliminarP2B"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140*"/>
+            <RowDefinition Height="73*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="140*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Background="Azure" HorizontalAlignment="Center" Margin="18,0">
+            <TextBox Name="txbIdCliente" Width="80" FontSize="20" Margin="20" VerticalContentAlignment="Center"/>
+            <TextBox Name="txbCliente" Width="200" FontSize="20" Margin="20" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.RowSpan="2" Grid.Row="1" Orientation="Horizontal" Background="Coral" HorizontalAlignment="Center">
+            <Button Click="BtnAgregar_Click" Name="btnAgregar" Content="AGREGAR" FontSize="20" Margin="20" Width="150"/>
+            <Button Click="BtnModificar_Click" Name="btnModificar" FontSize="20" Content="MODIFICAR" Margin="20" Width="150"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Grid.Row="3" Background="Azure" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="-2,0,394,0">
+            <TextBox Width="180" Margin="20" Name="txbCiEliminar" FontSize="18" VerticalContentAlignment="Center"/>
+            <Button Click="BtnEliminar_Click" Name="btnEliminar" Content="ELIMINAR CLIENTE" FontSize="15" VerticalContentAlignment="Center" Margin="25"/>
+        </StackPanel>
+        <TextBox Grid.Column="1" Grid.RowSpan="4" Name="txbListaClientes" FontSize="18" Margin="10" Background="Azure" TextWrapping="Wrap" AcceptsReturn="True"/>
+        <DataGrid SelectionChanged="DgClientes_SelectionChanged" Grid.Column="2" Grid.RowSpan="4" Name="dgClientes" />
+    </Grid>
+</Window>

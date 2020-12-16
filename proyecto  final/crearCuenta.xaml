@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:proyecto__final"
         mc:Ignorable="d"
-        Title="crearCuenta" Height="580" Width="800" WindowStartupLocation="CenterScreen" FlowDirection="RightToLeft" WindowStyle="None" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+        Title="crearCuenta" Height="580" Width="800" WindowStartupLocation="CenterScreen" FlowDirection="LeftToRight" WindowStyle="None" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
     <Grid>
         <StackPanel Margin="20" Background="#FF050A29" >
-            <Label Content="Nombre" Foreground="White" FontSize="20" HorizontalAlignment="Right"/>
+            <Label Content="Nombre" Foreground="White" FontSize="20" HorizontalAlignment="Left"/>
             <TextBox Name="txbNombre" Margin="20" Height="30"/>
-            <Label Content="Tipo" Foreground="White" FontSize="20" HorizontalAlignment="Right" />
+            <Label Content="Tipo" Foreground="White" FontSize="20" HorizontalAlignment="Left" />
             <TextBox Name="txbTipo"  Margin="20" Height="30" />
-            <Label Content="usuario" Foreground="White" FontSize="20" HorizontalAlignment="Right" />
+            <Label Content="usuario" Foreground="White" FontSize="20" HorizontalAlignment="Left" />
             <TextBox Name="txbUsuario"  Margin="20" Height="30"/>
-            <Label Content="Contraseña " Foreground="White" FontSize="20" HorizontalAlignment="Right" />
+            <Label Content="Contraseña " Foreground="White" FontSize="20" HorizontalAlignment="Left" />
             <TextBox Name="txbPassword"  Margin="20" Height="30"/>
             <Button  Content="CREAR CUENTA" FontSize="20" Margin="20" Width="200" x:Name="btnCREAR" Background="#FF9800" Foreground="White" FontWeight="SemiBold" Click="btnCREAR_Click" />
             <Button  Content="SALIR" FontSize="20" Width="200" x:Name="btnSALIR" Background="#FF9800" Foreground="White" FontWeight="SemiBold" HorizontalAlignment="Left" VerticalAlignment="Stretch" FlowDirection="LeftToRight" Click="btnSALIR_Click"/>

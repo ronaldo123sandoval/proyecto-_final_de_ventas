@@ -37,8 +37,9 @@
         <Button Content="¿QUIENES SOMOS?" Name="btnquienes" Margin="10" Width="180" Height="30" Grid.Column="0" HorizontalAlignment="Left" Grid.RowSpan="1" Grid.Row="4"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btnquienes_Click" ></Button>
         <Button Content="¿SALIR?" Name="btnsalir" Margin="194,22,0,28" Width="180" Height="30" Grid.Column="1" HorizontalAlignment="Left" Grid.RowSpan="1" Grid.Row="4"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btnsalir_Click_1"  />
         <Button Content="PRODUCTOS" Margin="10" Width="200" Height="30" Grid.Column="0" HorizontalAlignment="Center" Grid.RowSpan="1" Grid.Row="1"  Foreground="White" FontSize="13" Background="#FF050A29" Grid.ColumnSpan="2" Click="Button_Click" ></Button>
-        <Button Content="VENTAS" Margin="10" Width="200" Height="30" Grid.Column="0" HorizontalAlignment="Center" Grid.RowSpan="1" Grid.Row="2"  Foreground="White" FontSize="13" Background="#FF050A29" Grid.ColumnSpan="2" ></Button>
+        <Button x:Name="btnventas" Content="VENTAS" Margin="10" Width="200" Height="30" Grid.Column="0" HorizontalAlignment="Center" Grid.RowSpan="1" Grid.Row="2"  Foreground="White" FontSize="13" Background="#FF050A29" Grid.ColumnSpan="2" Click="btnventas_Click"></Button>
         <Button Content="REPORTES" Margin="20" Width="200" Height="30" Grid.Column="0" HorizontalAlignment="Center" Grid.RowSpan="1" Grid.Row="3"  Foreground="White" FontSize="13" Background="#FF050A29" Grid.ColumnSpan="2"></Button>
+        <TextBox Grid.Column="1" Name="txtmensaje" HorizontalAlignment="Left" Margin="261,26,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
 
 

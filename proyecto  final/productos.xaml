@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:proyecto__final"
         mc:Ignorable="d"
-        Title="productos" Height="450" Width="800" WindowStyle="None">
+        Title="productos" Height="450" Width="800" WindowStyle="None"  WindowStartupLocation="CenterScreen" >
     <Window.Background>
         <ImageBrush ImageSource="/4.jpg"/>
     </Window.Background>
@@ -34,18 +34,30 @@
         <Label HorizontalAlignment="Center" FontSize="25" Content="REGISTRO DE PRODUCTOS" Grid.ColumnSpan="3" Foreground="Black"></Label>
 
         <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Margin="0,4,0,4" Grid.RowSpan="4" Background="#FFDCC3A0" />
-        <Button  Name="btnguardar" Content="GUARDAR" HorizontalAlignment="Left" Margin="10" Grid.Row="3" Height="30" Width="100"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btnguardar_Click" ></Button>
+        <Button  Name="btnguardar" Content="GUARDAR" HorizontalAlignment="Left" Margin="10" Grid.Row="4" Height="30" Width="100"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btnguardar_Click" ></Button>
         <Button Name="btnmodificar" Content="MODIFICAR" Height="30" Width="100" HorizontalAlignment="Left" Margin="10" Grid.Row="4"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btnmodificar_Click" ></Button>
-        <Button Name="btneliminar" Content="ELIMINAR" Height="30" Width="100" HorizontalAlignment="Left" Margin="10" Grid.Row="5"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btneliminar_Click" ></Button>
-        <TextBox Name="txtguardar" HorizontalAlignment="Center"  Height="30" Width="300" Grid.Row="3" Grid.ColumnSpan="2"></TextBox>
-        <TextBox Name="txtmodificar" HorizontalAlignment="Center"  Height="30" Width="300" Grid.Row="4" Grid.ColumnSpan="2"></TextBox>
-        <TextBox Name="txteliminar" HorizontalAlignment="Center"  Height="30" Width="300" Grid.Row="5" Grid.ColumnSpan="2"></TextBox>
-        <Button Name="btnsalir" Content="SALIR" Height="30" Width="100" HorizontalAlignment="Right" Margin="0,21,51,9" Grid.Row="6"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btnsalir_Click" Grid.Column="2" />
+        <Button Name="btneliminar" Content="ELIMINAR" Height="30" Width="100" HorizontalAlignment="Right" Margin="10" Grid.ColumnSpan="1" Grid.Column="1" Grid.Row="5"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btneliminar_Click" ></Button>
+        <Label Content="ID" Height="30" Width="100" HorizontalAlignment="Center" Margin="10"  Grid.Column="0" Grid.Row="5"  Foreground="White" FontSize="13" ></Label>
+        <TextBox Name="txtguardar" HorizontalAlignment="Left"  Height="30" Width="67" Grid.Row="3" Margin="137,22,0,8">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox Name="txtmodificar" HorizontalAlignment="Left"  Height="30" Width="243" Grid.Row="3" Margin="9,21,0,9" Grid.Column="1"/>
+        <TextBox Name="txteliminar" HorizontalAlignment="Center"  Height="30" Width="299" Grid.Row="5" Grid.ColumnSpan="2" Margin="0,15,0,15"></TextBox>
         <TextBox Name="txbListaMascotas" Grid.RowSpan="2" TextWrapping="Wrap" Grid.Row="1" Width="581" Grid.ColumnSpan="3" AcceptsReturn="True" Margin="201,6,0,4" FontSize="18" HorizontalAlignment="Left" />
         <TextBox Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="202,62,0,0" Text="IDNOMBRE     ||      CIUDAD     ||      PRODUCTO   ||     CANTIDAD      ||         PRECIO       ||     EMPRESA     " TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="583" Background="#FF050A29"/>
-
-        <Button Name="btnBUSCAR" Content="BUSCAR" Height="30" Width="100" HorizontalAlignment="Left" Margin="10" Grid.Row="6"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btnBUSCAR_Click" ></Button>
+        <Label Content="ID" Height="30" Width="100" HorizontalAlignment="Center" Margin="10"  Grid.Column="0" Grid.Row="3"  Foreground="White" FontSize="13" ></Label>
+        <Label Content="Datos"  Height="30" Width="100" Grid.ColumnSpan="2" HorizontalAlignment="Left" Grid.Row="3"  Foreground="White" FontSize="13" Margin="220,22,0,8"/>
+        <Button Name="btnBUSCAR" Content="BUSCAR" Height="30" Width="100" HorizontalAlignment="Right" Grid.Row="6" Grid.ColumnSpan="2" Margin="10" Foreground="White" FontSize="13" Background="#FF050A29" Click="btnBUSCAR_Click" ></Button>
         <TextBox Name="txtBUSCAR" HorizontalAlignment="Center"  Height="30" Width="300" Grid.Row="6" Grid.ColumnSpan="2"></TextBox>
+        <Button x:Name="btnmode" Content="Modificar" Grid.Column="2" HorizontalAlignment="Left" Foreground="White" Margin="116,11,0,0" Grid.Row="5" VerticalAlignment="Top" Width="97" Height="32" Click="Button_Click" Background="#FF050A29" />
+        <Button Name="btnvolver" Content="SALIR" Height="30" Width="100" HorizontalAlignment="Right" Margin="0,21,51,9" Grid.Row="6"  Foreground="White" FontSize="13" Background="#FF050A29"  Grid.Column="2" Click="btnvolver_Click" />
 
 
     </Grid>

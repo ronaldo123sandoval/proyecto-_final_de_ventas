@@ -1,0 +1,26 @@
+﻿<Window x:Class="proyecto__final.ventas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proyecto__final"
+        mc:Ignorable="d"
+        Title="ventas" Height="650" Width="800" FlowDirection="LeftToRight"  WindowStartupLocation="CenterScreen" >
+    <Window.Background>
+        <ImageBrush ImageSource="/6.png"/>
+    </Window.Background>
+    <Grid >
+        <TextBox HorizontalAlignment="Left" Margin="25,245,0,0" Name="txtdatos" TextWrapping="Wrap" VerticalAlignment="Top" Width="455" Height="169"/>
+        <DataGrid x:Name="datagrid1" Margin="532,48,18,223"/>
+        <Label Content="Lista de productos realizados" HorizontalAlignment="Left" Margin="29,209,0,0" VerticalAlignment="Top" Width="165"/>
+        <Label Content="Lista de productos disponibles" HorizontalAlignment="Left" Margin="568,10,0,0" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Margin="158,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="192,150,0,0" VerticalAlignment="Top" Click="button1_Click"/>
+
+
+
+
+
+
+    </Grid>
+</Window>

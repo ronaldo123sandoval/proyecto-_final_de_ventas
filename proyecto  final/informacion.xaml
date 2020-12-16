@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:proyecto__final"
         mc:Ignorable="d"
-        Title="informacion" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None">
+        Title="informacion" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" >
     <Window.Background>
         <ImageBrush ImageSource="/4.jpg"/>
     </Window.Background>

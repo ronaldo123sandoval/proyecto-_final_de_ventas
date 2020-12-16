@@ -14,6 +14,7 @@
     <None Remove="3.jpg" />
     <None Remove="4.jpg" />
     <None Remove="5.jpg" />
+    <None Remove="6.png" />
     <None Remove="minimize.png" />
   </ItemGroup>
 
@@ -27,6 +28,7 @@
     <Resource Include="2.jpg" />
     <Resource Include="3.jpg" />
     <Resource Include="4.jpg" />
+    <Resource Include="6.png" />
     <Resource Include="minimize.png" />
   </ItemGroup>
 

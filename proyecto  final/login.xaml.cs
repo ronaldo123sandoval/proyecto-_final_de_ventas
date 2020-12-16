@@ -22,6 +22,7 @@ namespace proyecto__final
         public login()
         {
             InitializeComponent();
+            txtmensaje.Visibility = System.Windows.Visibility.Hidden;
         }
 
 
@@ -54,6 +55,14 @@ namespace proyecto__final
             siguiente.Show();
             this.Close();
 
+        }
+
+        private void btnventas_Click(object sender, RoutedEventArgs e)
+        {
+            ventas siguiente = new ventas();
+            siguiente.txtdatos.Text = txtmensaje.Text;
+            siguiente.Show();
+            this.Close();
         }
     }
   }

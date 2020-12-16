@@ -27,19 +27,16 @@ namespace proyecto__final
         string pathNameAuxiliar = @"D:\VIDEOS DE RONALDO\Programacion\proyecto\auxiliar.txt";
         public productos()
         {
+           
             InitializeComponent();
+            btnmodificar.Visibility = System.Windows.Visibility.Hidden;
+        
             MostrarMascotas();
+           
 
         }
 
-        private void btnsalir_Click(object sender, RoutedEventArgs e)
-        {
-            login principal = new login();
-            this.Hide();
-            principal.ShowDialog();
-            this.Close();
-
-        }
+ 
         private void CrearArchivoMascota()
         {
             File.CreateText(pathName);
@@ -104,7 +101,10 @@ namespace proyecto__final
                 }
                 if (modificado)
                 {
+                    btnmode.Visibility = System.Windows.Visibility.Visible;
+                    btnmodificar.Visibility = System.Windows.Visibility.Hidden;
                     MessageBox.Show("La Factura se modifico con exito");
+                    btnguardar.Visibility = System.Windows.Visibility.Visible;
                 }
                 else
                 {
@@ -134,6 +134,7 @@ namespace proyecto__final
 
             try
             {
+
                 if (File.Exists(pathName))
                 {
                     string idMascota = txtguardar.Text.Trim();
@@ -280,6 +281,22 @@ namespace proyecto__final
             {
                 MessageBox.Show("Error en la busqueda");
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            btnguardar.Visibility = System.Windows.Visibility.Hidden;
+            btnmode.Visibility = System.Windows.Visibility.Hidden;
+            btnmodificar.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void btnvolver_Click(object sender, RoutedEventArgs e)
+        {
+            login avanzar = new login();
+            avanzar.txtmensaje.Text = txbListaMascotas.Text;
+            avanzar.Show();
+            this.Close();
+
         }
     }
 }
