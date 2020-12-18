@@ -31,33 +31,34 @@
                 <ImageBrush ImageSource="/1.jpg"/>
             </StackPanel.Background>
         </StackPanel>
-        <Label HorizontalAlignment="Center" FontSize="25" Content="REGISTRO DE PRODUCTOS" Grid.ColumnSpan="3" Foreground="Black"></Label>
 
-        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Margin="0,4,0,4" Grid.RowSpan="4" Background="#FFDCC3A0" />
-        <Button  Name="btnguardar" Content="GUARDAR" HorizontalAlignment="Left" Margin="10" Grid.Row="4" Height="30" Width="100"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btnguardar_Click" ></Button>
-        <Button Name="btnmodificar" Content="MODIFICAR" Height="30" Width="100" HorizontalAlignment="Left" Margin="10" Grid.Row="4"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btnmodificar_Click" ></Button>
-        <Button Name="btneliminar" Content="ELIMINAR" Height="30" Width="100" HorizontalAlignment="Right" Margin="10" Grid.ColumnSpan="1" Grid.Column="1" Grid.Row="5"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btneliminar_Click" ></Button>
-        <Label Content="ID" Height="30" Width="100" HorizontalAlignment="Center" Margin="10"  Grid.Column="0" Grid.Row="5"  Foreground="White" FontSize="13" ></Label>
-        <TextBox Name="txtguardar" HorizontalAlignment="Left"  Height="30" Width="67" Grid.Row="3" Margin="137,22,0,8">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox Name="txtmodificar" HorizontalAlignment="Left"  Height="30" Width="243" Grid.Row="3" Margin="9,21,0,9" Grid.Column="1"/>
-        <TextBox Name="txteliminar" HorizontalAlignment="Center"  Height="30" Width="299" Grid.Row="5" Grid.ColumnSpan="2" Margin="0,15,0,15"></TextBox>
-        <TextBox Name="txbListaMascotas" Grid.RowSpan="2" TextWrapping="Wrap" Grid.Row="1" Width="581" Grid.ColumnSpan="3" AcceptsReturn="True" Margin="201,6,0,4" FontSize="18" HorizontalAlignment="Left" />
-        <TextBox Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="202,62,0,0" Text="IDNOMBRE     ||      CIUDAD     ||      PRODUCTO   ||     CANTIDAD      ||         PRECIO       ||     EMPRESA     " TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="583" Background="#FF050A29"/>
-        <Label Content="ID" Height="30" Width="100" HorizontalAlignment="Center" Margin="10"  Grid.Column="0" Grid.Row="3"  Foreground="White" FontSize="13" ></Label>
-        <Label Content="Datos"  Height="30" Width="100" Grid.ColumnSpan="2" HorizontalAlignment="Left" Grid.Row="3"  Foreground="White" FontSize="13" Margin="220,22,0,8"/>
-        <Button Name="btnBUSCAR" Content="BUSCAR" Height="30" Width="100" HorizontalAlignment="Right" Grid.Row="6" Grid.ColumnSpan="2" Margin="10" Foreground="White" FontSize="13" Background="#FF050A29" Click="btnBUSCAR_Click" ></Button>
-        <TextBox Name="txtBUSCAR" HorizontalAlignment="Center"  Height="30" Width="300" Grid.Row="6" Grid.ColumnSpan="2"></TextBox>
-        <Button x:Name="btnmode" Content="Modificar" Grid.Column="2" HorizontalAlignment="Left" Foreground="White" Margin="116,11,0,0" Grid.Row="5" VerticalAlignment="Top" Width="97" Height="32" Click="Button_Click" Background="#FF050A29" />
-        <Button Name="btnvolver" Content="SALIR" Height="30" Width="100" HorizontalAlignment="Right" Margin="0,21,51,9" Grid.Row="6"  Foreground="White" FontSize="13" Background="#FF050A29"  Grid.Column="2" Click="btnvolver_Click" />
+        <Button Grid.Row="1" Margin="265,73,175,7" Grid.ColumnSpan="2"  Foreground="White" FontSize="13" Background="#FF050A29" Name="BTNGUARDAR" Click="BTNGUARDAR_Click" Grid.RowSpan="2" >GUARDAR</Button>
+        <Button Grid.Column="1" Grid.Row="1" Margin="210,2,242,38"  Foreground="White" FontSize="13" Background="#FF050A29" Name="MODIFICAR" Click="MODIFICAR_Click" Grid.ColumnSpan="2" >MODIFICAR</Button>
+        <Button Margin="265,79,182,41"  Foreground="White" FontSize="13" Background="#FF050A29" Name="BTNELIMINAR" Click="BTNELIMINAR_Click" Grid.ColumnSpan="2" Grid.RowSpan="2" >ELIMINAR</Button>
+
+
+        <Label HorizontalAlignment="Center" FontSize="25" Content="REGISTRO DE PRODUCTOS" Grid.ColumnSpan="3" Foreground="Black"></Label>
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="3" Margin="0,4,256,4" Grid.RowSpan="4" Background="#FFDCC3A0" />
+        <Button Name="btnvolver" Content="SALIR" Height="30" Width="100" HorizontalAlignment="Right" Margin="0,21,51,9" Grid.Row="6"  Foreground="White" FontSize="13" Background="#FF050A29"  Grid.Column="2" Click="btnvolver_Click"  />
+        <DataGrid Grid.Row="5"  Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"  Margin="10,10,1,10" Name="dgproducto" SelectionChanged="dgproducto_SelectionChanged"/>
+        <Label Grid.Row="3" FontSize="20" Foreground="White" Margin="19,5,0,5"  HorizontalAlignment="Left">ID</Label>
+        <Label Grid.Row="3" FontSize="20" Foreground="White" Margin="0,5,0,5"  HorizontalAlignment="Center">PRODUCTO</Label>
+        <Label Grid.Row="3" FontSize="20" Foreground="White" Margin="71,5,0,5"  HorizontalAlignment="Left" Grid.Column="1">CANTIDAD</Label>
+        <Label Grid.Row="3" FontSize="20" Grid.ColumnSpan="2" Foreground="White" Margin="218,7,0,3"  HorizontalAlignment="Left">PRECIO</Label>
+        <TextBox Grid.Row="4" Margin="12" Width="40" HorizontalAlignment="Left" Name="txtid"></TextBox>
+        <TextBox Grid.Row="4" Margin="90,10,0,10" Width="100" HorizontalAlignment="Left" Name="txtnombre"></TextBox>
+        <TextBox Grid.Row="4" Margin="202,10,0,10" Width="100" HorizontalAlignment="Left" Grid.ColumnSpan="2" Name="txtproducto"></TextBox>
+        <TextBox Grid.Row="4" Margin="0,10,0,10" Width="100" HorizontalAlignment="Center" Name="txtprecio" Grid.Column="1"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="226,50,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Height="20" Name="dato1" Grid.RowSpan="2"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="226,50,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Height="20" x:Name="recibido1" Grid.RowSpan="2"/>
+
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="226,50,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Height="20" x:Name="dato2" Grid.RowSpan="2"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="226,50,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Height="20" x:Name="cuenta1" Grid.RowSpan="2"/>
+        <TextBox Grid.Row="1" Margin="126,1,0,43" Width="40" HorizontalAlignment="Left" x:Name="txteliminar" Grid.Column="1"/>
+
+        <TextBox Grid.Row="1" Margin="35,2,0,38" Width="92" HorizontalAlignment="Left" Name="txtmodificar" Grid.Column="2"></TextBox>
+        <TextBox Margin="139,2,0,38" Width="100" HorizontalAlignment="Left" Name="txttexto" Grid.Column="2" Grid.Row="1"/>
+
 
 
     </Grid>

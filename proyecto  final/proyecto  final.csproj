@@ -6,6 +6,7 @@
     <RootNamespace>proyecto__final</RootNamespace>
     <UseWPF>true</UseWPF>
     <ApplicationIcon></ApplicationIcon>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +16,8 @@
     <None Remove="4.jpg" />
     <None Remove="5.jpg" />
     <None Remove="6.png" />
+    <None Remove="7.jpg" />
+    <None Remove="8.png" />
     <None Remove="minimize.png" />
   </ItemGroup>
 
@@ -29,6 +32,8 @@
     <Resource Include="3.jpg" />
     <Resource Include="4.jpg" />
     <Resource Include="6.png" />
+    <Resource Include="7.jpg" />
+    <Resource Include="8.png" />
     <Resource Include="minimize.png" />
   </ItemGroup>
 

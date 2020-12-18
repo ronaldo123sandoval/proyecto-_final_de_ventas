@@ -22,7 +22,10 @@ namespace proyecto__final
         public login()
         {
             InitializeComponent();
-            txtmensaje.Visibility = System.Windows.Visibility.Hidden;
+            cuenta.Visibility = System.Windows.Visibility.Hidden;
+            mensaje.Visibility = System.Windows.Visibility.Hidden;
+            mensaje2.Visibility = System.Windows.Visibility.Hidden;
+            enviar2.Visibility = System.Windows.Visibility.Hidden;
         }
 
 
@@ -52,6 +55,8 @@ namespace proyecto__final
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             productos siguiente = new productos();
+            siguiente.dato2.Text = mensaje2.Text;
+            siguiente.cuenta1.Text = cuenta.Text;
             siguiente.Show();
             this.Close();
 
@@ -60,8 +65,20 @@ namespace proyecto__final
         private void btnventas_Click(object sender, RoutedEventArgs e)
         {
             ventas siguiente = new ventas();
-            siguiente.txtdatos.Text = txtmensaje.Text;
+            siguiente.enviar2.Text=mensaje.Text;
+            siguiente.cuenta.Text = cuenta.Text;
             siguiente.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            informes avanzar = new  informes();
+            avanzar.txtdatos1.Text = mensaje.Text;
+            avanzar.txtdatos2.Text = mensaje2.Text;
+            avanzar.cuenta.Content = cuenta.Text;
+           
+            avanzar.Show();
             this.Close();
         }
     }

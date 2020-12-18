@@ -44,8 +44,11 @@
         <Label HorizontalAlignment="Left"  Content="44446124 " FontSize="25" Grid.Column="1" Foreground="White" Grid.Row="5" Margin="0" ></Label>
         <Label HorizontalAlignment="Right"  Content="CELULAR" FontSize="25" Foreground="Black" Grid.Row="6"></Label>
         <Label HorizontalAlignment="Left"  Content="79846124 " FontSize="25" Grid.Column="1" Foreground="White" Grid.Row="6" Margin="0" ></Label>
+        <Label HorizontalAlignment="Left"  Content="Community es una pagina de  administracion " FontSize="25" Grid.Column="1" Foreground="White" Grid.Row="1" Grid.ColumnSpan="2" Width="526" Margin="8,0,0,0" />
+       
+
+        <Label HorizontalAlignment="Left"  Content="de ventas para toda bolivia " FontSize="25" Grid.Column="1" Foreground="White" Grid.Row="1" Grid.ColumnSpan="2" Width="526" Margin="9,29,0,11" Grid.RowSpan="2" />
         <Button Grid.Column="2" Grid.Row="7" Margin="172,20,34,-16" Content="SALIR" Background="#FF050A29" Foreground="White"  Width="60" Click="Button_Click_1" ></Button>
-        <Label HorizontalAlignment="Left"  Content="LINK A NUESTRA PAGINA:"  Grid.ColumnSpan="2" FontSize="25" Foreground="White" Grid.Row="8" Margin="1" Background="#FF050A29" ></Label>
 
 
 

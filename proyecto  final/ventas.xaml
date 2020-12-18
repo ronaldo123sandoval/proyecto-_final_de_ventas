@@ -5,21 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:proyecto__final"
         mc:Ignorable="d"
-        Title="ventas" Height="650" Width="800" FlowDirection="LeftToRight"  WindowStartupLocation="CenterScreen" >
+        Title="ventas" Height="850" Width="800" FlowDirection="LeftToRight"  WindowStartupLocation="CenterScreen" >
     <Window.Background>
         <ImageBrush ImageSource="/6.png"/>
     </Window.Background>
+
     <Grid >
-        <TextBox HorizontalAlignment="Left" Margin="25,245,0,0" Name="txtdatos" TextWrapping="Wrap" VerticalAlignment="Top" Width="455" Height="169"/>
-        <DataGrid x:Name="datagrid1" Margin="532,48,18,223"/>
-        <Label Content="Lista de productos realizados" HorizontalAlignment="Left" Margin="29,209,0,0" VerticalAlignment="Top" Width="165"/>
-        <Label Content="Lista de productos disponibles" HorizontalAlignment="Left" Margin="568,10,0,0" VerticalAlignment="Top" Width="165"/>
-        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Margin="158,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="192,150,0,0" VerticalAlignment="Top" Click="button1_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="266"/>
+            <ColumnDefinition Width="266"/>
+            <ColumnDefinition Width="266"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Label Content="Recibo de Venta" HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="30" Foreground="White" Grid.ColumnSpan="6"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="txbNumero" ToolTip="Numero Recibo" Margin="20" FontSize="18"/>
+        <Label Grid.Row="1" FontSize="20" Margin="20"  Foreground="White">ID</Label>
+        <Label Grid.Row="2" FontSize="20" Margin="20"  Foreground="White">Nombre del producto</Label>
+        <Label Grid.Row="3" FontSize="20" Margin="20"  Foreground="White">NIT/CIU</Label>
+        <Label Grid.Row="4" FontSize="20" Margin="20"  Foreground="White">Total a Pagar</Label>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="txbNombre" ToolTip="Nombre o Razon Social" Margin="20" FontSize="18"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Name="txbCI" ToolTip="Nit o CI" Margin="20" FontSize="18"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Name="txbTotal" ToolTip="Total a Pagar" Margin="20" FontSize="18"/>
+        <Button Grid.Row="8"  Foreground="White" FontSize="13" Background="#FF050A29" Content="MODIFICAR" Margin="100,130,206,-90" Name="btnmodificar" Grid.Column="1" Grid.ColumnSpan="2" Click="btnmodificar_Click" ></Button>
+        <TextBox Name="txtmodificar1" Margin="26,124,140,-87" Grid.Row="8" />
+        <TextBox Name="txtmodificar2" Margin="165,124,190,-87" Grid.Row="8" Grid.ColumnSpan="2" />
+        <Button  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" Name="btnRegistrar" Margin="20" Content="REGISTRAR VENTA" Foreground="White" FontSize="13" Background="#FF050A29" Click="btnRegistrar_Click"/>
+        <DataGrid SelectionChanged="DgRecibos_SelectionChanged" Grid.Row="6" Grid.ColumnSpan="3" Grid.RowSpan="2"  Margin="10" Name="dgRecibos"/>
+        <Button Name="btnsalir" Content="Salir" Foreground="White" FontSize="13" Background="#FF050A29" Margin="123,110,56,-80" Grid.Column="2" Width="87"  Grid.Row="8" Click="btnsalir_Click"/>
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="8" Grid.ColumnSpan="2" Margin="25,7,0,-7" Width="500">
+            <Label FontSize="30">ID</Label>
+            <TextBox Name="txbNumeroEliminar" Width="160" Margin="10"/>
+            <Button Click="BtnEliminar_Click" Name="btnEliminar" Content="Eliminar Recibo" Foreground="White" FontSize="13" Background="#FF050A29" Margin="10"/>
+            <TextBox TextWrapping="Wrap" Width="113" Height="32" x:Name="dato2"/>
+            <TextBox TextWrapping="Wrap" Width="113" Height="32" x:Name="enviar2"/>
+            <TextBox TextWrapping="Wrap" Width="113" Height="32" x:Name="cuenta"/>
 
 
 
 
+
+        </StackPanel>
 
 
     </Grid>

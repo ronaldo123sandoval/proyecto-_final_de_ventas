@@ -90,16 +90,17 @@ namespace proyecto__final
         {
 
             try
-            {
+            {             
                 string usuario = txbUsuario.Text.Trim();
                 string password = txbPassword.Password.Trim();
                 if (usuario != "" && password != "")
                 {
                     if (ValidarUsuario(usuario, password))
                     {
-                        //Datos correctos
-                        //new Principal().ShowDialog();
+
                         login principal = new login();
+                        principal.nombre.Content = txbUsuario.Text.Trim();
+                        principal.cuenta.Text = txbUsuario.Text.Trim();
                         this.Hide();
                         principal.ShowDialog();
                         this.Close();

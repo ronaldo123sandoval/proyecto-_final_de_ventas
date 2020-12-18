@@ -32,14 +32,22 @@
                 <ImageBrush ImageSource="/1.jpg"/>
             </StackPanel.Background>
         </StackPanel>
-        <Label Content="" Name="nombre" Margin="332,11,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" FontSize="20" Grid.ColumnSpan="2"/>
-        <Label Content="BIENVENIDO : " Margin="0,10,72,0" VerticalAlignment="Top" Grid.Column="0" HorizontalAlignment="Right" Width="138" FontSize="20"/>
+        <Label Content="" Name="nombre" Margin="304,16,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="310" FontSize="20" Grid.ColumnSpan="2"/>
+        <Label Content="Community " Margin="0,79,251,0" Foreground="White" VerticalAlignment="Top" Grid.Column="0" HorizontalAlignment="Right" Width="138" FontSize="20" Grid.Row="1" Grid.RowSpan="2"/>
         <Button Content="¿QUIENES SOMOS?" Name="btnquienes" Margin="10" Width="180" Height="30" Grid.Column="0" HorizontalAlignment="Left" Grid.RowSpan="1" Grid.Row="4"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btnquienes_Click" ></Button>
         <Button Content="¿SALIR?" Name="btnsalir" Margin="194,22,0,28" Width="180" Height="30" Grid.Column="1" HorizontalAlignment="Left" Grid.RowSpan="1" Grid.Row="4"  Foreground="White" FontSize="13" Background="#FF050A29" Click="btnsalir_Click_1"  />
         <Button Content="PRODUCTOS" Margin="10" Width="200" Height="30" Grid.Column="0" HorizontalAlignment="Center" Grid.RowSpan="1" Grid.Row="1"  Foreground="White" FontSize="13" Background="#FF050A29" Grid.ColumnSpan="2" Click="Button_Click" ></Button>
         <Button x:Name="btnventas" Content="VENTAS" Margin="10" Width="200" Height="30" Grid.Column="0" HorizontalAlignment="Center" Grid.RowSpan="1" Grid.Row="2"  Foreground="White" FontSize="13" Background="#FF050A29" Grid.ColumnSpan="2" Click="btnventas_Click"></Button>
-        <Button Content="REPORTES" Margin="20" Width="200" Height="30" Grid.Column="0" HorizontalAlignment="Center" Grid.RowSpan="1" Grid.Row="3"  Foreground="White" FontSize="13" Background="#FF050A29" Grid.ColumnSpan="2"></Button>
-        <TextBox Grid.Column="1" Name="txtmensaje" HorizontalAlignment="Left" Margin="261,26,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="REPORTES" Margin="20" Width="200" Height="30" Grid.Column="0" HorizontalAlignment="Center" Grid.RowSpan="1" Grid.Row="3"  Foreground="White" FontSize="13" Background="#FF050A29" Grid.ColumnSpan="2" Click="Button_Click_1"></Button>
+        <TextBox HorizontalAlignment="Left" Margin="254,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="149" Height="32" Name="cuenta" Grid.Column="1" Grid.Row="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="254,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="149" Height="32" x:Name="mensaje" Grid.Column="1" Grid.Row="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="254,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="149" Height="32" x:Name="mensaje2" Grid.Column="1" Grid.Row="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="255,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="32" x:Name="enviar2" Grid.Column="1" Grid.Row="2"/>
+        <StackPanel Grid.Column="1" Margin="245,0,0,24" Grid.RowSpan="2">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/8.png"/>
+            </StackPanel.Background>
+        </StackPanel>
 
 
 
